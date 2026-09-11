@@ -64,13 +64,13 @@ Authentication failures return `401`, while insufficient permissions return `403
 ## ⚙️ Run Locally
 
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/developer-aazar/Team-Management-API
+cd app
 
 python -m venv venv
 source venv/bin/activate
 
-pip install -r requirements.txt
+uv sync
 ```
 
 Create a `.env` file with your PostgreSQL database URL and JWT configuration.
