@@ -7,6 +7,10 @@ from app.schemas.auth import SignupRequest , SignupResponse , LoginRequest , Log
 
 router = APIRouter(prefix= "/auth")
 
+@router.post("/")
+def root():
+    return {"message": "Welcome to My API. Head to /docs for API documentation."}
+
 @router.post("/signup", response_model=SignupResponse , status_code=status.HTTP_201_CREATED)
 def signup(data: SignupRequest , db: Session = Depends(get_db)):
     if db.query(User).filter(User.email == data.email).first():
