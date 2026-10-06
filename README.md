@@ -85,7 +85,7 @@ uvicorn app.main:app --reload
 API documentation:
 
 ```text
-[http://127.0.0.1:8000/docs](https://team-management-api-production.up.railway.app/docs)
+https://team-management-api-production.up.railway.app/docs
 ```
 
 ## 🎯 V1
